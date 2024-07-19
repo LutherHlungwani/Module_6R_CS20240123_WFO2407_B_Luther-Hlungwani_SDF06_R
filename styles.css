@@ -13,70 +13,101 @@
 body {
     font-family: "Open Sans", Arial, sans-serif;
     min-height: 100vh;
+    max-width: 70vw;
     background-color: #fafafa;
     color: #262626;
     padding-bottom: 3rem;
 }
-.container{
-    display: flex;
-    flex-direction: column;
-    position: inherit;
+img{
+    max-width: 200px;
+    max-height: 300px;
+}
 
-}
-.profile-edit-button{
-    
-}
 .profile{
     display:flex;
-    flex-direction: row;
-    height: 200px;
+    flex-direction: column;
+    height: 500px;
+    margin-left: 20px;
+    margin-bottom: 50px;
+}
 
+.profile-bio{
+    align-self:flex-start;
+    padding-left: 400px;
+    padding-bottom: 90px;
+    font-size: 14px;
+
+}
+
+li{
+    display:inline;
+   
+}
+
+.profile-user-settings{
+    
+    padding-left: 400px;
+    display:flex;
+    flex-direction: row;
+    
+    
+
+}
+
+h1{
+    padding-right: 30px;
+}
+
+.profile-stats{
+    font-size: 14px ;
+    padding-top:12px;
+    padding-bottom: 12px;
+    padding-left: 400px;
+}
+
+
+.profile-image{
+
+    height: 100px;
+    width: 100px;
+    margin-left: 50px;
+    padding-top: 50px;
+    border:border-box;
     
 }
-.profile-image{
-    height: 190px;
-    width: 190px;
+
+.btn{
+    margin: 1px;
+    padding-top:none;
+  
+    
 }
 
 .gallery{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    gap: 30px;
+    gap: inherit;
    
 }
-img {
-    
-    max-height: 300px;
-    max-width: 100px;
-    width: auto;
-    height: 100%;
-   
-    
-}
-.profile-bio{
-    align-self: center;
-    padding-right: 500px;
-    font-size: 14px;
-}
-.profile-stats{
-    font-size: 14px ;
-    padding-top:12px;
-    padding-bottom: 12px;
-    border-top-width: 1px;
-    border-top-width:1px solid rgb(var(--ig-separator));
-    
-}
-img:hover{
-    color: #262626;
-    opacity: 0.5;
-}
+
+
+
 .gallery-items{
     position:relative;
     object-fit: cover;
     border-radius: none;
-    height:98%;
-    width:98%;
+    height:100px;
+    width: 70px;
+    overflow: clip;
+    overflow-clip-margin: content-box;
+    
 }
-.gallery-items:hover ,.gallery-items-info{
-    opacity:1;
+.gallery-items:hover{
+    opacity: 0.5;
+    color: #262626;
+    aria-hidden:false;
+}
+.gallery-items:hover, .gallery-items-info{
+    opacity:0.5;
+    color: #262626;
 }
