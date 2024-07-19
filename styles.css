@@ -17,7 +17,59 @@ body {
     color: #262626;
     padding-bottom: 3rem;
 }
+.container{
+    display: flex;
+    flex-direction: column;
+    position: inherit;
 
+}
+.profile-edit-button{
+    
+}
+.profile{
+    display:flex;
+    flex-direction: row;
+    height: 200px;
+
+    
+}
+.profile-image{
+    height: 190px;
+    width: 190px;
+}
+
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+   
+}
 img {
-    display: block;
+    
+    max-height: 300px;
+    max-width: 100px;
+    width: auto;
+    height: 100%;
+   
+    
+}
+.profile-bio{
+    align-self: center;
+    padding-right: 500px;
+    font-size: 14px;
+}
+.profile-stats{
+    font-size: 14px ;
+    padding-top:12px;
+    padding-bottom: 12px;
+    border-top-width: 1px;
+    border-top-width:1px solid rgb(var(--ig-separator));
+    
+}
+img:hover{
+    color: #262626;
+    opacity: 0.5;
+}
+.gallery-items{
+    
 }
