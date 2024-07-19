@@ -71,5 +71,12 @@ img:hover{
     opacity: 0.5;
 }
 .gallery-items{
-    
+    position:relative;
+    object-fit: cover;
+    border-radius: none;
+    height:98%;
+    width:98%;
+}
+.gallery-items:hover ,.gallery-items-info{
+    opacity:1;
 }
