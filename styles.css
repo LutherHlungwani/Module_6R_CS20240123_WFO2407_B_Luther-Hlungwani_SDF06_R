@@ -66,14 +66,13 @@ h1{
 }
 
 
-.profile-image{
-
-    height: 100px;
-    width: 100px;
-    margin-left: 50px;
-    padding-top: 50px;
-    border:border-box;
-    
+.profile-image {
+    width: 120px; /* Adjust the size */
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3)); /* Adds a soft shadow */
+    /* You can also experiment with other filter effects (e.g., brightness, contrast) */
 }
 
 .btn{
@@ -83,31 +82,68 @@ h1{
     
 }
 
-.gallery{
+
+
+
+
+.gallery {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: inherit;
-   
-}
-
-
-
-.gallery-items{
-    position:relative;
-    object-fit: cover;
-    border-radius: none;
-    height:100px;
-    width: 70px;
-    overflow: clip;
-    overflow-clip-margin: content-box;
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
     
 }
-.gallery-items:hover{
-    opacity: 0.5;
-    color: #262626;
-    aria-hidden:false;
+
+.gallery-item {
+    position: relative; /* For image overlay effects, if desired */
 }
-.gallery-items:hover, .gallery-items-info{
-    opacity:0.5;
-    color: #262626;
+
+.gallery-item img {
+    width: 100%;
+    display: block;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    gap: 0;
+}
+
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item::before {
+    content: '\2764'; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px; 
+    color: #ff3366; 
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+}
+
+.gallery-item:hover::before {
+    opacity: 1; 
+}
+
+.icon-heart {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px; /* Adjust icon size */
+    color: #ff3366; /* Customize icon color */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+@media screen and (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr); /* Two columns on smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .gallery {
+        grid-template-columns: repeat(3/1fr); /* Single column on even smaller screens */
+    }
 }
